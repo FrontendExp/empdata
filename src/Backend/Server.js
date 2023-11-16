@@ -10,18 +10,18 @@ app.use(cors());
 let employees = [];
 
 app.post('/postemp', function (req, res) {
-  // Assuming that the request body contains information about the employee
+ 
   const newEmployee = req.body;
 
-  // Add the new employee to the employees array
+
   employees.push(newEmployee);
 
-  // Send a response indicating success
+
   res.status(201).json({ message: 'Employee added successfully', employee: newEmployee });
 });
 
 app.get('/getemp', function (req, res) {
-  // Send the list of employees as a response
+
   res.status(200).json(employees);
 });
 
